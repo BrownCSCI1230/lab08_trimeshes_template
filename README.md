@@ -1,2 +1,2 @@
 # Lab 8: Trimeshes
-This is a placeholder readme.
+Welcome to Lab 8 Trimeshes! The handout for this lab is located [here](https://browncsci1230.github.io/labs/lab8).
