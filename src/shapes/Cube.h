@@ -1,13 +1,12 @@
-#ifndef SPHERE_H
-#define SPHERE_H
+#pragma once
 
 #include <vector>
 #include <glm/glm.hpp>
 
-class Sphere
+class Cube
 {
 public:
-    void updateParams(int param1, int param2);
+    void updateParams(int param1);
     std::vector<float> generateShape() { return m_vertexData; }
 
 private:
@@ -15,13 +14,9 @@ private:
     void setVertexData();
     void makeTile(glm::vec3 topLeft, glm::vec3 bottomLeft,
                   glm::vec3 bottomRight, glm::vec3 topRight);
-    void makeWedge(float currTheta, float nextTheta);
-    void makeSphere();
+    void makeFace(glm::vec3 topLeft, glm::vec3 bottomLeft,
+                  glm::vec3 bottomRight, glm::vec3 topRight);
 
     std::vector<float> m_vertexData;
-    float m_radius = 0.5;
     int m_param1;
-    int m_param2;
 };
-
-#endif // SPHERE_H

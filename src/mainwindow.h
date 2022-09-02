@@ -1,5 +1,4 @@
-#ifndef MAINWINDOW_H
-#define MAINWINDOW_H
+#pragma once
 
 #include <QMainWindow>
 #include <QSlider>
@@ -53,4 +52,3 @@ private slots:
     void onCylinderChange();
     void onConeChange();
 };
-#endif // MAINWINDOW_H

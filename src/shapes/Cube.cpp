@@ -11,7 +11,7 @@ void Cube::updateParams(int param1)
 void Cube::makeTile(glm::vec3 topLeft, glm::vec3 bottomLeft,
                     glm::vec3 bottomRight, glm::vec3 topRight)
 {
-    // [TODO]: Task 2 -- create a tile (aka 2 triangles) out of the 4
+    // Task 2: create a tile (aka 2 triangles) out of the 4
     //         given points (once you have the tile, make sure you add
     //         the points to m_vertexData)
     // Note: pay attention to how you are calculating your normals! you will
@@ -23,7 +23,7 @@ void Cube::makeTile(glm::vec3 topLeft, glm::vec3 bottomLeft,
 void Cube::makeFace(glm::vec3 topLeft, glm::vec3 bottomLeft,
                     glm::vec3 bottomRight, glm::vec3 topRight)
 {
-    // [TODO]: Task 3 -- create a single side of the cube out of the 4
+    // Task 3: create a single side of the cube out of the 4
     //         given points and makeTile()
     // Note: think about how param 1 affects the number of triangles on
     //       the face of the cube
@@ -33,14 +33,14 @@ void Cube::makeFace(glm::vec3 topLeft, glm::vec3 bottomLeft,
 
 void Cube::setVertexData()
 {
-    // uncomment this for Task 2 and recomment out for Task 3:
+    // Uncomment this for Task 2 and recomment out for Task 3:
 //    makeTile(glm::vec3(-0.5f, 0.5f, 0.5f),
 //             glm::vec3(-0.5f, -0.5f, 0.5f),
 //             glm::vec3(0.5f, -0.5f, 0.5f),
 //             glm::vec3(0.5f, 0.5f, 0.5f));
 
-    // uncomment this for Task 3:
-//    // positive z
+    // Uncomment this for Task 3:
+//    // Positive z
 //    makeFace(glm::vec3(-0.5f, 0.5f, 0.5f),
 //             glm::vec3(-0.5f, -0.5f, 0.5f),
 //             glm::vec3(0.5f, -0.5f, 0.5f),
@@ -48,7 +48,7 @@ void Cube::setVertexData()
 
 
 
-    // [TODO]: Task 4 -- Use the makeFace() function to make all 6 sides of the cube
+    // Task 4: Use the makeFace() function to make all 6 sides of the cube
 
 
 }

@@ -1,5 +1,4 @@
-#ifndef GLWIDGET_H
-#define GLWIDGET_H
+#pragma once
 
 #include <glm/glm.hpp>
 
@@ -91,5 +90,3 @@ private:
     int m_currParam2;
     bool m_currShowWireframeNormals = true;
 };
-
-#endif // GLWIDGET_H

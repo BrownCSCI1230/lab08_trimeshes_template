@@ -1,6 +1,4 @@
-#ifndef SETTINGS_H
-#define SETTINGS_H
-
+#pragma once
 
 // Enumeration values for the Shapes that the user can select in the GUI.
 enum ShapeType {
@@ -21,5 +19,3 @@ struct Settings {
 
 // The global Settings object, will be initialized by MainWindow
 extern Settings settings;
-
-#endif // SETTINGS_H

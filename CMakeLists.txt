@@ -19,27 +19,30 @@ find_package(Qt6 REQUIRED COMPONENTS OpenGL)
 find_package(Qt6 REQUIRED COMPONENTS OpenGLWidgets)
 find_package(Qt6 REQUIRED COMPONENTS Gui)
 
+# Allows you to include files from within those directories, without prefixing their filepaths
+include_directories(src)
+
 # Specifies .cpp and .h files to be passed to the compiler
 add_executable(${PROJECT_NAME}
-  main.cpp
+  src/main.cpp
 
-  mainwindow.cpp
-  Settings.cpp
-  glwidget.cpp
-  shapes/Triangle.cpp
-  shapes/Cube.cpp
-  shapes/Sphere.cpp
-  shapes/Cylinder.cpp
-  shapes/Cone.cpp
+  src/mainwindow.cpp
+  src/Settings.cpp
+  src/glwidget.cpp
+  src/shapes/Triangle.cpp
+  src/shapes/Cube.cpp
+  src/shapes/Sphere.cpp
+  src/shapes/Cylinder.cpp
+  src/shapes/Cone.cpp
 
-  mainwindow.h
-  Settings.h
-  glwidget.h
-  shapes/Triangle.h
-  shapes/Cube.h
-  shapes/Sphere.h
-  shapes/Cylinder.h
-  shapes/Cone.h
+  src/mainwindow.h
+  src/Settings.h
+  src/glwidget.h
+  src/shapes/Triangle.h
+  src/shapes/Cube.h
+  src/shapes/Sphere.h
+  src/shapes/Cylinder.h
+  src/shapes/Cone.h
 )
 
 # Specifies libraries to be linked (Qt components, glew, etc)

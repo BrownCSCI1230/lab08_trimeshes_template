@@ -1,5 +1,4 @@
-#ifndef CONE_H
-#define CONE_H
+#pragma once
 
 #include <vector>
 #include <glm/glm.hpp>
@@ -19,5 +18,3 @@ private:
     int m_param2;
     float m_radius = 0.5;
 };
-
-#endif // CONE_H
