@@ -22,7 +22,7 @@ static const char *vertexShaderSourceCore =
     "uniform mat4 mvMatrix;\n"
     "uniform mat3 normalMatrix;\n"
     "void main() {\n"
-    "   vert = vertex.xyz;\n"
+    "   vert = vec3(mvMatrix * vertex);;\n"
     "   vertNormal = normalMatrix * normal;\n"
     "   gl_Position = projMatrix * mvMatrix * vertex;\n"
     "}\n";
@@ -163,7 +163,7 @@ void GLWidget::initializeGL()
     m_default_mvLoc = m_program->uniformLocation("mvMatrix");
     m_default_normalLoc = m_program->uniformLocation("normalMatrix");
     m_default_lightPos = m_program->uniformLocation("lightPos");
-    m_program->setUniformValue(m_default_lightPos, QVector3D(0, 0, 70)); // light stuff
+    m_program->setUniformValue(m_default_lightPos, QVector3D(70, 70, 70)); // light stuff
     m_program->release();
 
     // Create Wireframe shader program
@@ -248,7 +248,7 @@ void GLWidget::paintGL()
     m_program->bind();
     m_program->setUniformValue(m_default_projLoc, glmMatToQMat(m_proj));
     m_program->setUniformValue(m_default_mvLoc, glmMatToQMat(m_camera * m_world));
-    QMatrix3x3 normalMatrix = glmMatToQMat(m_world).normalMatrix();
+    QMatrix3x3 normalMatrix = glmMatToQMat(m_camera * m_world).normalMatrix();
     m_program->setUniformValue(m_default_normalLoc, normalMatrix);
     glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
     glDrawArrays(GL_TRIANGLES, 0, m_numTriangles);
