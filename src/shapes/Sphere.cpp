@@ -38,13 +38,15 @@ void Sphere::makeSphere()
 }
 
 void Sphere::setVertexData() {
-    // Uncomment to make wedge in Task 6 and recomment out for Task 7
+    // Uncomment below lines to make wedge in Task 6 and recomment out for Task 7:
+
 //    float thetaStep = glm::radians(360.f / m_param2);
 //    float currentTheta = 0 * thetaStep;
 //    float nextTheta = 1 * thetaStep;
 //    makeWedge(currentTheta, nextTheta);
 
-    // Uncomment to make sphere in Task 7
+    // Uncomment below lines to make sphere in Task 7:
+
 //    makeSphere();
 }
 

@@ -33,13 +33,15 @@ void Cube::makeFace(glm::vec3 topLeft, glm::vec3 bottomLeft,
 
 void Cube::setVertexData()
 {
-    // Uncomment this for Task 2 and recomment out for Task 3:
+    // Uncomment below lines for Task 2 and recomment out for Task 3:
+
 //    makeTile(glm::vec3(-0.5f, 0.5f, 0.5f),
 //             glm::vec3(-0.5f, -0.5f, 0.5f),
 //             glm::vec3(0.5f, -0.5f, 0.5f),
 //             glm::vec3(0.5f, 0.5f, 0.5f));
 
-    // Uncomment this for Task 3:
+    // Uncomment below lines for Task 3:
+
 //    // Positive z
 //    makeFace(glm::vec3(-0.5f, 0.5f, 0.5f),
 //             glm::vec3(-0.5f, -0.5f, 0.5f),

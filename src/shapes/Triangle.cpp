@@ -8,7 +8,7 @@ void Triangle::updateParams()
 
 void Triangle::setVertexData()
 {
-    // [TODO]: Task 1 -- update m_vertexData with the vertices and normals
+    // Task 1: update m_vertexData with the vertices and normals
     //         needed to tesselate a triangle
     // Note: you may find the insertVec3 function (in the OpenGLShape class
     //       useful in adding your points into m_vertexData
