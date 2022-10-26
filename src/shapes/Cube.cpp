@@ -26,19 +26,19 @@ void Cube::makeFace(glm::vec3 topLeft,
 }
 
 void Cube::setVertexData() {
-    // Uncomment these in Task 2, then comment them out for Task 3:
+    // Uncomment these lines for Task 2, then comment them out for Task 3:
 
     // makeTile(glm::vec3(-0.5f,  0.5f, 0.5f),
     //          glm::vec3( 0.5f,  0.5f, 0.5f),
     //          glm::vec3(-0.5f, -0.5f, 0.5f),
     //          glm::vec3( 0.5f, -0.5f, 0.5f));
 
-    // Uncomment these lines in Task 3:
+    // Uncomment these lines for Task 3:
 
-    // makeFace(glm::vec3(-0.5f, 0.5f, 0.5f),
-    //          glm::vec3(0.5f, 0.5f, 0.5f),
+    // makeFace(glm::vec3(-0.5f,  0.5f, 0.5f),
+    //          glm::vec3( 0.5f,  0.5f, 0.5f),
     //          glm::vec3(-0.5f, -0.5f, 0.5f),
-    //          glm::vec3(0.5f, -0.5f, 0.5f));
+    //          glm::vec3( 0.5f, -0.5f, 0.5f));
 
     // Task 4: Use the makeFace() function to make all 6 sides of the cube
 }

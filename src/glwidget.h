@@ -72,9 +72,9 @@ private:
     // Vertices, matrices, etc.
     std::vector<GLfloat> verts;
     int m_numTriangles;
-    glm::mat4x4 m_proj = glm::mat4(1.0f);
+    glm::mat4x4 m_proj   = glm::mat4(1.0f);
     glm::mat4x4 m_camera = glm::mat4(1.0f);
-    glm::mat4x4 m_world = glm::mat4(1.0f);
+    glm::mat4x4 m_world  = glm::mat4(1.0f);
     static bool m_transparent;
 
     // Tracking shape to render
