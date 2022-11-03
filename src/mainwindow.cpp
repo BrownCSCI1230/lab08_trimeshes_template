@@ -233,10 +233,10 @@ void MainWindow::connectCylinder()
 void MainWindow::onCylinderChange()
 {
     settings.shapeType = SHAPE_CYLINDER;
-    p1Slider->setMinimum(3);
-    p2Slider->setMinimum(1);
-    p1Slider->setValue(3);
-    p2Slider->setValue(1);
+    p1Slider->setMinimum(1);
+    p2Slider->setMinimum(3);
+    p1Slider->setValue(1);
+    p2Slider->setValue(3);
     glWidget->settingsChange();
 }
 
@@ -249,10 +249,10 @@ void MainWindow::connectCone()
 void MainWindow::onConeChange()
 {
     settings.shapeType = SHAPE_CONE;
-    p1Slider->setMinimum(3);
-    p2Slider->setMinimum(1);
-    p1Slider->setValue(3);
-    p2Slider->setValue(1);
+    p1Slider->setMinimum(1);
+    p2Slider->setMinimum(3);
+    p1Slider->setValue(1);
+    p2Slider->setValue(3);
     glWidget->settingsChange();
 }
 

@@ -370,39 +370,28 @@ void GLWidget::settingsChange()
         return;
     }
 
-    // if shape settings change
-    if (settings.shapeType != m_currShape) {
-        if (settings.shapeType == SHAPE_TRIANGLE) {
-            m_currShape = SHAPE_TRIANGLE;
-        } else if (settings.shapeType == SHAPE_CUBE) {
-            m_currShape = SHAPE_CUBE;
-        } else if (settings.shapeType == SHAPE_SPHERE) {
-            m_currShape = SHAPE_SPHERE;
-        } else if (settings.shapeType == SHAPE_CYLINDER) {
-            m_currShape = SHAPE_CYLINDER;
-        } else if (settings.shapeType == SHAPE_CONE) {
-            m_currShape = SHAPE_CONE;
-        }
-    }
-
-    // parameter settings
-    if (settings.shapeParameter1 != m_currParam1 || settings.shapeParameter2 != m_currParam2) {
+    // if shape or parameter settings change
+    if (settings.shapeType != m_currShape || settings.shapeParameter1 != m_currParam1 || settings.shapeParameter2 != m_currParam2) {
         m_currParam1 = settings.shapeParameter1;
         m_currParam2 = settings.shapeParameter2;
 
         if (settings.shapeType == SHAPE_TRIANGLE) {
+            m_currShape = SHAPE_TRIANGLE;
             m_triangle->updateParams();
         } else if (settings.shapeType == SHAPE_CUBE) {
+            m_currShape = SHAPE_CUBE;
             m_cube->updateParams(settings.shapeParameter1);
         } else if (settings.shapeType == SHAPE_SPHERE) {
+            m_currShape = SHAPE_SPHERE;
             m_sphere->updateParams(settings.shapeParameter1, settings.shapeParameter2);
         } else if (settings.shapeType == SHAPE_CYLINDER) {
+            m_currShape = SHAPE_CYLINDER;
             m_cylinder->updateParams(settings.shapeParameter1, settings.shapeParameter2);
         } else if (settings.shapeType == SHAPE_CONE) {
+            m_currShape = SHAPE_CONE;
             m_cone->updateParams(settings.shapeParameter1, settings.shapeParameter2);
         }
     }
-
     bindVbo();
     update();
 }
