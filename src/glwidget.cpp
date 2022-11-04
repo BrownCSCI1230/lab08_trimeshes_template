@@ -1,5 +1,5 @@
 #include "glwidget.h"
-#include "Settings.h"
+#include "settings.h"
 
 #include <QOpenGLShaderProgram>
 #include <QCoreApplication>
