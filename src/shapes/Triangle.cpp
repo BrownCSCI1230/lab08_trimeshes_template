@@ -1,4 +1,4 @@
-#include "Triangle.h"
+#include "triangle.h"
 
 void Triangle::updateParams() {
     m_vertexData = std::vector<float>();

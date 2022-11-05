@@ -1,7 +1,4 @@
-#include "Cylinder.h"
-#include "glm/gtc/constants.hpp"
-#include "glm/gtx/transform.hpp"
-#include "glm/gtc/matrix_transform.hpp"
+#include "cylinder.h"
 
 void Cylinder::updateParams(int param1, int param2) {
     m_vertexData = std::vector<float>();

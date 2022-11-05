@@ -5,7 +5,6 @@
 #include <QCoreApplication>
 #include <math.h>
 #include <iostream>
-#include "glm/gtx/transform.hpp"
 
 /**
  * ==================================================
