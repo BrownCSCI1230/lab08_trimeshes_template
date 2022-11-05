@@ -1,4 +1,4 @@
-#include "cube.h"
+#include "Cube.h"
 
 void Cube::updateParams(int param1) {
     m_vertexData = std::vector<float>();

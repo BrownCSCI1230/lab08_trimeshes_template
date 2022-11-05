@@ -1,4 +1,4 @@
-#include "cone.h"
+#include "Cone.h"
 
 void Cone::updateParams(int param1, int param2) {
     m_vertexData = std::vector<float>();

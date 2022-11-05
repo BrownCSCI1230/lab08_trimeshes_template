@@ -29,20 +29,20 @@ add_executable(${PROJECT_NAME}
   src/mainwindow.cpp
   src/Settings.cpp
   src/glwidget.cpp
-  src/shapes/triangle.cpp
-  src/shapes/cube.cpp
-  src/shapes/sphere.cpp
-  src/shapes/cylinder.cpp
-  src/shapes/cone.cpp
+  src/shapes/Triangle.cpp
+  src/shapes/Cube.cpp
+  src/shapes/Sphere.cpp
+  src/shapes/Cylinder.cpp
+  src/shapes/Cone.cpp
 
   src/mainwindow.h
-  src/settings.h
+  src/Settings.h
   src/glwidget.h
-  src/shapes/triangle.h
-  src/shapes/cube.h
-  src/shapes/sphere.h
-  src/shapes/cylinder.h
-  src/shapes/cone.h
+  src/shapes/Triangle.h
+  src/shapes/Cube.h
+  src/shapes/Sphere.h
+  src/shapes/Cylinder.h
+  src/shapes/Cone.h
 )
 
 # Specifies libraries to be linked (Qt components, glew, etc)
