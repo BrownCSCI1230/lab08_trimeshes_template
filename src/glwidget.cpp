@@ -220,6 +220,8 @@ void GLWidget::bindVbo()
         verts = m_cylinder->generateShape();
     } else if (m_currShape == SHAPE_CONE) {
         verts = m_cone->generateShape();
+    } else if (m_currShape == SHAPE_TETRAHEDRON) {
+        verts = m_tet->generateShape();
     }
 
     m_numTriangles = int(verts.size()) / 6;
@@ -295,6 +297,10 @@ void GLWidget::initializeShapesAndParameters() {
     m_cylinder->updateParams(m_currParam1, m_currParam2);
     m_cone = new Cone();
     m_cone->updateParams(m_currParam1, m_currParam2);
+    // for debugging task (task 8)
+    m_tet = new Tetrahedron();
+    m_tet->updateParams();
+
 }
 
 QMatrix4x4 GLWidget::glmMatToQMat(glm::mat4x4 m) {
@@ -389,7 +395,10 @@ void GLWidget::settingsChange()
         } else if (settings.shapeType == SHAPE_CONE) {
             m_currShape = SHAPE_CONE;
             m_cone->updateParams(settings.shapeParameter1, settings.shapeParameter2);
+        } else if (settings.shapeType == SHAPE_TETRAHEDRON) {
+            m_currShape = SHAPE_TETRAHEDRON;
         }
+
     }
     bindVbo();
     update();
@@ -399,6 +408,7 @@ GLWidget::~GLWidget()
 {
     delete m_sphere;
     delete m_cone;
+    delete m_tet;
     delete m_cube;
     delete m_cylinder;
     delete m_triangle;

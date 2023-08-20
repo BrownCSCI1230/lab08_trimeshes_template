@@ -34,6 +34,7 @@ add_executable(${PROJECT_NAME}
   src/shapes/Sphere.cpp
   src/shapes/Cylinder.cpp
   src/shapes/Cone.cpp
+  src/shapes/Tet.cpp
 
   src/mainwindow.h
   src/Settings.h
@@ -43,6 +44,7 @@ add_executable(${PROJECT_NAME}
   src/shapes/Sphere.h
   src/shapes/Cylinder.h
   src/shapes/Cone.h
+  src/shapes/Tet.h
 )
 
 # Specifies libraries to be linked (Qt components, glew, etc)

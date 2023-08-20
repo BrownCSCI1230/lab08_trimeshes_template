@@ -6,7 +6,8 @@ enum ShapeType {
     SHAPE_CUBE,
     SHAPE_CONE,
     SHAPE_SPHERE,
-    SHAPE_CYLINDER
+    SHAPE_CYLINDER,
+    SHAPE_TETRAHEDRON
 };
 
 struct Settings {
