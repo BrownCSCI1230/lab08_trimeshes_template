@@ -69,7 +69,7 @@ void MainWindow::setupUI()
     coneCB->setText(QStringLiteral("Cone"));
 
     tetrahedronCB = new QRadioButton(); // Tet button
-    tetrahedronCB->setText(QStringLiteral("Tetrahedron"));
+    tetrahedronCB->setText(QStringLiteral("Task 8"));
 
     // Create toggle for showing wireframe / normals
     showWireframeNormals = new QCheckBox();
