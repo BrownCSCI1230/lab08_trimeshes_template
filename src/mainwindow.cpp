@@ -68,6 +68,9 @@ void MainWindow::setupUI()
     coneCB = new QRadioButton(); // Cone button
     coneCB->setText(QStringLiteral("Cone"));
 
+    tetrahedronCB = new QRadioButton(); // Tet button
+    tetrahedronCB->setText(QStringLiteral("Task 8"));
+
     // Create toggle for showing wireframe / normals
     showWireframeNormals = new QCheckBox();
     showWireframeNormals->setText(QStringLiteral("Show Wireframe and Normals"));
@@ -120,6 +123,7 @@ void MainWindow::setupUI()
     vLayout->addWidget(sphereCB);
     vLayout->addWidget(cylinderCB);
     vLayout->addWidget(coneCB);
+    vLayout->addWidget(tetrahedronCB);
     vLayout->addWidget(width_spacer);
     vLayout->addWidget(params_label);
     vLayout->addWidget(param1_label);
@@ -138,6 +142,7 @@ void MainWindow::setupUI()
     connectSphere();
     connectCone();
     connectCylinder();
+    connectTetrahedron();
 
     // Connects the toggle for showing wireframe / normals
     connectWireframeNormals();
@@ -236,6 +241,19 @@ void MainWindow::onConeChange()
     glWidget->settingsChange();
 }
 
+// tetrahedron
+void MainWindow::connectTetrahedron()
+{
+    connect(tetrahedronCB, &QRadioButton::clicked, this, &MainWindow::onTetrahedronChange);
+}
+
+void MainWindow::onTetrahedronChange()
+{
+    settings.shapeType = SHAPE_TETRAHEDRON;
+    glWidget->settingsChange();
+}
+
+
 //***************************** Handles Wireframe/Normals UI Changes *****************************//
 void MainWindow::connectWireframeNormals()
 {
@@ -259,5 +277,6 @@ MainWindow::~MainWindow()
     delete(sphereCB);
     delete(cylinderCB);
     delete(coneCB);
+    delete(tetrahedronCB);
     delete(showWireframeNormals);
 }

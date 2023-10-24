@@ -30,6 +30,7 @@ private:
     QRadioButton *sphereCB;
     QRadioButton *cylinderCB;
     QRadioButton *coneCB;
+    QRadioButton *tetrahedronCB;
 
     void connectParam1();
     void connectParam2();;
@@ -40,6 +41,7 @@ private:
     void connectSphere();
     void connectCylinder();
     void connectCone();
+    void connectTetrahedron();
 
 private slots:
     void onValChangeP1(int newValue);
@@ -51,4 +53,5 @@ private slots:
     void onSphereChange();
     void onCylinderChange();
     void onConeChange();
+    void onTetrahedronChange();
 };

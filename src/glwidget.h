@@ -16,6 +16,7 @@
 #include "shapes/Sphere.h"
 #include "shapes/Cylinder.h"
 #include "shapes/Cone.h"
+#include "shapes/Tet.h"
 
 QT_FORWARD_DECLARE_CLASS(QOpenGLShaderProgram)
 
@@ -85,6 +86,7 @@ private:
     Sphere* m_sphere;
     Cylinder* m_cylinder;
     Cone* m_cone;
+    Tetrahedron* m_tet;
 
     // Tracking params
     int m_currParam1;
