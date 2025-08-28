@@ -12,6 +12,9 @@ public:
 private:
     void insertVec3(std::vector<float> &data, glm::vec3 v);
     void setVertexData();
+    void makeCapSlice(float currentTheta, float nextTheta);
+    void makeSlopeSlice(float currentTheta, float nextTheta);
+    void makeWedge(float currentTheta, float nextTheta);
 
     std::vector<float> m_vertexData;
     int m_param1;
